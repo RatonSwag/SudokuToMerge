@@ -1,0 +1,26 @@
+<UserControl x:Class="WpfControlLibrary1.NoteMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfControlLibrary1"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="130">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="x:" />
+            <TextBox x:Name="RowInput" Width="40"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="y:" />
+            <TextBox x:Name="ColumnInput" Width="40"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Note: "/>
+            <TextBox x:Name="TextBoxNoteInput" Width="80" Height="20"/>
+        </StackPanel>
+        <ComboBox x:Name="DropDownPosition" SelectedValue="{Binding FilterService.TripLengthFrom, Mode=TwoWay}"/>
+        <Button x:Name="ButtonConfirmNote" Height="25" Click="Set_Note">Confirmer</Button>
+    </StackPanel>
+</UserControl>
