@@ -1,0 +1,26 @@
+<UserControl x:Class="WpfControlLibrary1.AnswerMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjetCAOSudoku"
+             mc:Ignorable="d" 
+             d:DesignHeight="140" d:DesignWidth="130">
+
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="x:" />
+                <TextBox x:Name="RowInput" Width="40"/>
+            </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="y:" />
+            <TextBox x:Name="ColumnInput" Width="40"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Reponse: "/>
+                <TextBox x:Name="TextBoxAnswerInput" Width="80" Height="20"/>
+            </StackPanel>
+            <Button x:Name="ButtonConfirmAnswer" Height="25" Click="Set_Answer">Confirmer</Button>
+        </StackPanel>
+</UserControl>
